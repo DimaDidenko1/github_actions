@@ -1,0 +1,11 @@
+name: First Workflow
+on: [push]
+
+jobs:
+  build:
+    run-first-comand:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Display some text
+          run: echo "Some text"
+          
