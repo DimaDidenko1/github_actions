@@ -1,0 +1,16 @@
+name: Third Workflow
+on: push
+jobs:
+    run-first-command:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Comand in Multiple
+          run: |
+            echo "my relative path: "
+            pwd
+            echo "my catalog path: "
+            ls -la
+            echo "my npm version: "
+            npm -v
+            echo "my os version: "
+            uname -a
