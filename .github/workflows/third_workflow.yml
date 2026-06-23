@@ -11,15 +11,15 @@ jobs:
             pwd
             echo "my catalog path: "
             ls -la
-        # - uses: actions/checkout@v4
-        - name: copy files
-          run: |
-            git init
-            git remote add origin "https://github.com/actions/checkout.git"
-            git fetch
-            git checkout main
+        - uses: actions/checkout@v4
+        # - name: copy files
+        #   run: |
+        #     git init
+        #     git remote add origin "https://github.com/actions/checkout.git"
+        #     git fetch
+        #     git checkout main
         - name: new file
           run: |
-            echo "my new ls -la: "
+            echo "my new ls -a: "
             ls -a
 
