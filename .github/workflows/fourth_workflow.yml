@@ -6,8 +6,15 @@ on:
         - completed
 
 jobs:
-    hello-world-command:
+    success-world-command:
       runs-on: ubuntu-latest
+      if: ${{ github.event.workflow_run.conclusion == 'success' }}
       steps:
-        - name: Hello World
-          run: echo "Hello World!"
+        - name: Successful Workflow Run
+          run: echo "Success! The previous workflow completed successfully."
+    failure-world-command:
+      runs-on: ubuntu-latest
+      if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+      steps:
+        - name: Failed Workflow Run
+          run: echo "Failure! The previous workflow did not complete successfully."
